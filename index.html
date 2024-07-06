@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crime Rate Prediction System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Safe City: Crime Rate Prediction</h1>
+  </header>
+  <main>
+    <section class="prediction-form">
+      <h2>Predict Crime Rates</h2>
+      <form id="crime-form">
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <select name="location" id="location">
+            <option value="">Select a Location</option>
+            <option value="ikorodu north">ikorodu north</option>
+            <option value="ikorodu central">ikorodu central</option>
+            <option value="igbogbo">igbogbo</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="crime-type">Crime Type:</label>
+          <select name="crime-type" id="crime-type">
+            <option value="">Select a Crime Type</option>
+            <option value="theft">Theft</option>
+            <option value="assault">Assault</option>
+            <option value="vandalism">Vandalism</option>
+            <option value="robbery">robbery</option>  
+            <option value="burglary">burglary</option>
+            </select>
+        </div>
+        <button type="button" onclick="calc_crime_rate()" >Predict</button>
+        <div class="form-group" style="margin-top: 20px;">
+          <label for="crime_rate">Crime Rate per 100,000 general population::</label>
+          <input type="text" id="crime_rate" name="crime_rate" value="0">
+        </div>
+      </form>
+      <div id="prediction-result"></div>
+    </section>
+  </main>
+  <script src="script.js"></script> 
+</body>
+</html>
